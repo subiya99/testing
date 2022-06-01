@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <title>Signup page</title>
+        <link rel="stylesheet" href="assets/static/settings.css">
+        
+    </head> 
+    <body>
+      <div class="sidebar">
+        <div class="logo-details">
+         
+          <h1>BILLSNAP</h1>
+        </div>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html">
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="estimates.html">
+                <i class='bx bx-analyse' ></i>
+                <span class="links_name">Estimates</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html" class="active">
+                <i class='bx bx-cog' ></i>
+                <span class="links_name">Settings</span>
+              </a>
+            </li>
+            <hr class="solid">
+            <h3 class="heads">Customer</h3>
+            <li>
+              <a href="addcustomer.html">
+                <i class='bx bx-box' ></i>
+                <span class="links_name">Create</span>
+              </a>
+            </li>
+              <li>
+                <a href="customerlist.html">
+                  <i class='bx bx-book-alt' ></i>
+                  <span class="links_name">Customer List</span>
+                </a>
+              </li>
+              <li>
+                <a href="bulkupload.html">
+                  <i class='bx bx-log-out' ></i>
+                  <span class="links_name">Bulk Upload</span>
+                </a>
+              </li>
+              <li>
+                <a href="managegroup.html">
+                  <i class='bx bx-archive-in' ></i>
+                  <span class="links_name">Manage Group </span>
+                </a>
+              </li>
+              <li>
+                <a href="pending.html">
+                  <i class='bx bx-bar-chart' ></i>
+                  <span class="links_name">Pending approvals</span>
+                </a>
+              </li>
+              <li>
+                <a href="message.html">
+                  <i class='bx bx-message' ></i>
+                  <span class="links_name">Messaging</span>
+                </a>
+              </li>
+    
+            <hr class="solid">
+            <h3 class="heads">Payments</h3>
+            <li>
+              <a href="transcations.html">
+                <i class='bx bx-list-ul' ></i>
+                <span class="links_name">Transcations</span>
+              </a>
+            </li>
+            <li>
+              <a href="collect.html">
+                <i class='bx bx-pie-chart-alt-2' ></i>
+                <span class="links_name">Collect Payment</span>
+              </a>
+            </li>
+            <li>
+              <a href="plans.html">
+                <i class='bx bx-coin-stack' ></i>
+                <span class="links_name">Plans</span>
+              </a>
+            </li>
+           
+            <li>
+              <a href="request.html">
+                <i class='bx bx-heart' ></i>
+                <span class="links_name">Request</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+          <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard"> Settings</span>
+          </div>
+        </nav>
+    
+        <div class="home-content">    
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Address</th>
+        <th>Phone no</th>
+        <th>Email</th>
+        <th>Reminders</th>
+        <th>Payments</th>
+        <th>Subscriptions</th>
+        
+      </tr>
+      <tr>
+        <td>Alfreds </td>
+        <td>Maria </td>
+        <td>Germany</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>
+
+
+    
